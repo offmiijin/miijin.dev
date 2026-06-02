@@ -119,7 +119,11 @@ p a:hover, .post-content a:hover, .list-posts a:hover {
 .nav-links {
   display: flex;
   align-items: center;
-  gap: 1rem;
+  gap: 0.5rem;
+}
+
+.nav-links .nav-icons-divider {
+  margin: 0 2px;
 }
 
 .nav-brand {
