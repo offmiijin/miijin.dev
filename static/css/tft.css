@@ -71,6 +71,17 @@ h1 { font-size: 2.2rem; margin-bottom: 0.8em; }
 h2 { font-size: 1.8rem; margin-bottom: 0.6em; }
 h3 { font-size: 1.4rem; margin-bottom: 0.5em; }
 
+/* Headings dentro dos artigos ganham linha decorativa */
+.post-content h1,
+.post-content h2,
+.post-content h3,
+.post-content h4,
+.post-content h5,
+.post-content h6 {
+  border-bottom: 2px solid var(--sketch-border);
+  padding-bottom: 0.3em;
+}
+
 p, li {
   font-family: var(--font-body);
   color: var(--sketch-foreground);
@@ -103,7 +114,6 @@ p a:hover, .post-content a:hover, .list-posts a:hover {
   background: rgba(255, 255, 255, 0.85);
   backdrop-filter: blur(8px);
   border-bottom: 1px solid var(--sketch-border);
-  box-shadow: 3px 3px 0px rgba(37, 99, 235, 0.06);
   display: flex;
   align-items: center;
 }
@@ -475,7 +485,6 @@ pre code {
     background: rgba(17, 17, 17, 0.8);
     backdrop-filter: blur(8px);
     border-bottom-color: var(--sketch-border);
-    box-shadow: 3px 3px 0px rgba(14, 165, 233, 0.06);
   }
 
   .nav-brand {

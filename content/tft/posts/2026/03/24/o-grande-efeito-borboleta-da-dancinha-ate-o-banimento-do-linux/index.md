@@ -17,7 +17,6 @@ Nesse exato momento em que dou inicio a esse artigo (18/03/2026) a Lei 15.211/20
 Esse artigo tem o cunho informativo e opinativo, não leve como verdades absolutas o que está escrito aqui. Sempre pesquise por conta própria e tire suas próprias conclusões. Anexarei ao final do artigo todas as informações nas quais eu baseio minha escrita.
 
 ## O Início | As Dancinhas
----
 ### O Caso Hytalo Santos
 #### Quem é Hytalo Santos?
 A variável principal e que deu início a todo esse furdúncio chama-se **Hítalo José Santos Silva**, mais conhecido como **Hytalo Santos** nas redes sociais (pelo menos até o banimento de todos os seus perfis).
@@ -72,7 +71,6 @@ Outro caso é o da menor Caroliny Dreher, exposta desde os 11 anos em vídeos de
 Até marcas famosas já sofreram boicote. Em 2022, a Balenciaga gerou escândalo com a campanha "Balenciaga Gift Shop Campaign", mostrava crianças fotografadas segurando ursinhos de pelúcia vestidos com adereços de sadomasoquismo, também conhecidos pela sigla BDSM (Bondage, Disciplina, Dominação, Submissão, Sadismo e Masoquismo).
 
 ## O Bater Das Asas | A Implementação da Lei Felca
----
 ### Da Denúncia à Legislação
 #### O Vídeo do Felca
 O estopim da Lei Felca ocorreu em 6 de Agosto de 2025, com a publicação do vídeo intitulado **_Adultização_** pelo influenciador digital Felipe Bressanim Pereira, conhecido como Felca. Em apenas um dia, o conteúdo alcançou 20 milhões de visualizações, onde é exposto casos de erotização, exploração e abuso sexual de crianças e adolescentes por adultos em plataformas como o YouTube, Instagram e TikTok. No vídeo, Felca destaca a sexualização de menores em "dancinhas" virais — as famosas "trends" — citando explicitamente o influenciador Hytalo Santos.
@@ -129,7 +127,6 @@ Usuários vem opinando fortemente na plataforma, onde uma usuária ironizou, _"d
 No âmbito tecnológico, impactos afetam o Open Source (Código Aberto). Uma conta paródia publicou: _"você não está escondendo computadores com Linux no seu porão, não está?"_, destacando o risco de censura. Outro usuário alertou: _"como a Lei Felca vai destruir o Open Source no Brasil"_, argumentando que projetos de software livre carecem de infraestrutura para mecanismos de "verificação de idade autêntica" e "identidade". Em tom de piada, usuários dizem: _"o Brasil será o primeiro país no mundo que irá piratear software livre."_.
 
 ## O Furacão | O (possível) Banimento do Linux.
----
 ### O Começo
 Horas após a vigência da lei, alguns projetos foram "bloqueados" no Brasil, como o fork do Arch Linux para sistemas de 32 bits, voltado para hardware legado. Os administradores declaram: _"Não é possível prestar serviços na sua jurisdição sem violar nossos princípios de privacidade e sem recursos para compliance"_. Da mesma forma, o MidnightBSD, um sistema operacional derivado do FreeBSD, anunciou sua "saída do Brasil", citando a incapacidade de implementar verificações de idade sem comprometer sua natureza Open Source.
 
@@ -165,7 +162,6 @@ As restrições impostas pela lei seriam, em grande medida, inviáveis ou suscet
 Para a maioria das distribuições Linux (como Debian ou Arch Linux), não existe um "dono" ou sede no Brasil. A tentativa de punir ou bloquear um sistema sem representação legal fere o princípio de que ninguém é obrigado a fazer ou deixar de fazer algo senão em virtude de lei direcionada a um ente capaz de cumpri-la.
 
 # Referências
----
 - [Quem é Hytalo Santos, influenciador preso após denúncia de exploração de menores | terra](https://www.terra.com.br/diversao/gente/quem-e-hytalo-santos-influenciador-preso-apos-denuncia-de-exploracao-de-menores,41371c9260649a9477c874a2b796e6ab0gxupg9y.html)
 - [De denúncias de Felca até prisão de Hytalo Santos: veja cronologia do caso | cnnbrasil](https://www.cnnbrasil.com.br/nacional/sudeste/sp/de-denuncias-de-felca-ate-prisao-de-hytalo-santos-veja-cronologia-do-caso/)
 - [Quem é Hytalo Santos, influencer acusado de pedofilia e exploração de menores | oglobo](https://oglobo.globo.com/cultura/noticia/2025/08/11/quem-e-hytalo-santos-influencer-acusado-de-pedofilia-e-exploracao-de-menores.ghtml)

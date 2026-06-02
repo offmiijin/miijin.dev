@@ -17,7 +17,6 @@ No momento em que escrevo este artigo (03/04/2026) 18 jogos já foram contornado
 Este artigo tem o cunho informativo e opinativo, não leve como verdades absolutas o que está escrito aqui. Sempre pesquise por conta própria e tire suas próprias conclusões. Anexarei ao final do artigo todas as informações nas quais eu baseio minha escrita.
 
 ## A Proteção de Conteúdos Digitais
----
 O DRM, ou _Digital Rights Management_, é um mecanismo de gestão com várias ferramentas para proteger conteúdos digitais. Ele permite que os proprietários de conteúdos imponham restrições específicas, como limitar a reprodução, o compartilhamento ou a modificação de arquivos.
 
 O objetivo principal do DRM é equilibrar a acessibilidade ao conteúdo com a proteção contra pirataria. Há diversas tecnologias usadas na tentativa de bloquear acessos não autorizados ou distribuições ilegais, incluindo **chaves de ativação**, **criptografia de conteúdo**, **restrições em tempo de execução**, etc.
@@ -25,7 +24,6 @@ O objetivo principal do DRM é equilibrar a acessibilidade ao conteúdo com a pr
 Apesar de o mecanismo ser eficiente, ele não é impenetrável, sendo quebrado por métodos como **engenharia reversa** para a criação de **cracks** ou **patches** de softwares e o mais novo **HyperVisor Bypass**, que em especial burla facilmente o **DENUVO**.
 
 ## O DENUVO
----
 O DENUVO é uma tecnologia comercial de proteção de software desenvolvida pela DENUVO Software Solutions GmbH, adquirida pela Irdeto em 2018. Na última década, o DENUVO tem sido a principal solução para a prevenção de pirataria, principalmente no período pós-lançamento, quando ocorre a maior parte das vendas de um título.
 
 Diferente de DRMs tradicionais, o **DENUVO NÃO É UM DRM**, mas sim um software Anti-Tamper que envolve outros DRMs, como o do Steam, Epic Games ou proteções proprietárias de empresas como a CAPCOM. O objetivo do DENUVO não é proteger o jogo, mas sim envolver o DRM propriamente dito e garantir que ele não seja alterado por meio da monitorização durante a execução.
@@ -58,7 +56,6 @@ O funcionamento do DENUVO é altamente sofisticado, sendo integrado de forma pro
 	- **Busca por Debuggers**: Emprega APIs como **IsDebuggerPresent()** e monitora variáveis de kernel como **KdDebuggerNotPresent** para identificar se há depuradores ativos no sistema.
 
 ## HyperVisor Bypass e a Morte do DENUVO
----
 ### O Que é um Hipervisor?
 Um hipervisor é um software, firmware ou hardware que cria, gerencia e executa máquinas virtuais (VMs), permitindo que vários sistemas operacionais sejam executados de forma isolada em um único servidor. Ele atua como uma camada de abstração entre o hardware físico (host) e as VMs (guests), alocando recursos como CPU, memória, armazenamento e rede de maneira eficiente e segura. Os hipervisores são classificados em dois tipos principais com base na sua arquitetura e implementação:
 - **Hipervisor Tipo 1 (Bare-Metal ou Nativo)**: Executa diretamente no hardware físico, sem a intermediação de um sistema operacional host. Ele tem acesso irrestrito aos recursos do hardware, proporcionando maior desempenho e isolamento, o que o torna ideal para ambientes empresariais de alta demanda. Nessa configuração, o hipervisor atua como o "sistema operacional" primário, gerenciando as VMs como processos filhos.
@@ -138,7 +135,6 @@ A FitGirl sugeriu que a Irdeto também poderia passar a realizar verificações 
 Outro método pode ser ajustes do lado do servidor nos protocolos de desafio-resposta da DENUVO, potencialmente incorporando heurísticas anti-VM, como detecção de hardware sintético, assinaturas de tempo anômalas ou verificação de virtualizações aninhadas.
 
 ## Fim dos Cracks Tradicionais
----
 Apesar da velocidade em que os jogos são burlados com o novo método e seus avanços significativos no cenário de pirataria, não há isenção de preocupações, pois ainda requer a desativação de camadas de proteções cruciais para seu funcionamento. Os cracks tradicionais continuarão sendo desenvolvidos e aprimorados por diversas razões estratégicas e técnicas. Uma delas é que, enquanto a comunidade não encontrar uma maneira de automatizar e proteger o processo do novo método, a "quebra" tradicional continuará sendo o padrão de excelência para a preservação e segurança do sistema.
 
 ### O "Padrão Ouro" da Pirataria
@@ -159,7 +155,6 @@ Diferente de grupos coletivos, Voices38 trabalha sozinho, focando em técnicas "
 Seu impacto vem sendo notável desde a aposentadoria da EMPRESS e o surgimento do novo método "HyperVisor Bypass". Sua identidade permanece anônima, e ele enfatiza não querer discutir planos futuros para evitar detecção. Voices38 representa a transição na cena para crackers individuais em uma era de DRMs mais integrados.
 
 # Referências
----
 - [Digital rights management | wikipedia](https://en.wikipedia.org/wiki/Digital_rights_management#Technologies)
 - [Denuvo | wikipedia](https://en.wikipedia.org/wiki/Denuvo)
 - [Deep Dive — What is Hypervisor? How does it work? Should I Revert All Settings and Restart My PC via the VBS Script After Each Play Session Using Hypervisor? If I use it, can I get hacked visiting a website? etc | reddit](https://www.reddit.com/r/PiratedGames/comments/1s1vnkc/deep_dive_what_is_hypervisor_how_does_it_work/)
