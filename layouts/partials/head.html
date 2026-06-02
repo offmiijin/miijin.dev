@@ -12,6 +12,15 @@
         }
     </style>
 
+    {{/* Set data-theme antes do CSS carregar para evitar flash */}}
+    <script>
+        (function() {
+            var theme = localStorage.getItem('theme-preference') ||
+                (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+            document.documentElement.setAttribute('data-theme', theme);
+        })();
+    </script>
+
     {{ $title := .Title | markdownify | default .Site.Title }}
     {{ $description := ((.Description | default (.Summary | default .Content) | default .Site.Params.Description) | plainify | truncate 160) }}
     {{ $image := .Params.image | default (.Scratch.Get "avatarImgSrc") }}
@@ -52,6 +61,24 @@
 
     {{ $jsBundle := resources.Match "js/**.js" | resources.Concat "js/bundle.js" | minify | resources.Fingerprint "sha256" }}
     <script src="{{ $jsBundle.RelPermalink }}" integrity="{{ $jsBundle.Data.Integrity }}"></script>
+
+    {{/* Sincroniza data-theme com o toggle de tema do Gokarna */}}
+    <script>
+        (function() {
+            // O setTheme do bundle é function declaration local, não window.
+            // Escutamos o clique nos toggles e sincronizamos data-theme
+            // depois que o Gokarna já atualizou o localStorage.
+            document.addEventListener('click', function(e) {
+                var toggle = e.target.closest('.dark-theme-toggle');
+                if (toggle) {
+                    requestAnimationFrame(function() {
+                        var theme = localStorage.getItem('theme-preference') || 'light';
+                        document.documentElement.setAttribute('data-theme', theme);
+                    });
+                }
+            });
+        })();
+    </script>
 
     {{ range .AlternativeOutputFormats }}
     {{ printf "<link rel=%q type=%q href=%q title=%q>" .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}

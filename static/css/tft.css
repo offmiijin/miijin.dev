@@ -1,13 +1,13 @@
 /* =============================================
    TFT — Sketch / Hand-Drawn Theme
-   Carregado condicionalmente na seção tft/
+   Aplicado globalmente
    Paleta: Hextra (blue accent, clean light/dark)
    ============================================= */
 
 /* ---------------------------------------------
    1. VARIÁVEIS (tema sketch — Hextra light mode)
    --------------------------------------------- */
-body {
+:root {
   /* Surfaces */
   --sketch-bg: #ffffff;
   --sketch-bg-lines: #f9fafb;
@@ -28,6 +28,19 @@ body {
   /* Fontes manuscritas */
   --font-heading: 'Kalam', 'Patrick Hand', cursive;
   --font-body: 'Patrick Hand', 'Kalam', cursive;
+}
+
+/* Modo dark via html[data-theme="dark"] */
+html[data-theme="dark"] {
+  --sketch-bg: #111111;
+  --sketch-bg-lines: #1a1a1a;
+  --sketch-card: #1f1f1f;
+  --sketch-foreground: #f3f4f6;
+  --sketch-muted: #9ca3af;
+  --sketch-primary: #0ea5e9;
+  --sketch-secondary: #38bdf8;
+  --sketch-accent: #0ea5e9;
+  --sketch-border: #404040;
 }
 
 /* Espaço para o footer absoluto */
@@ -449,113 +462,98 @@ pre code {
 /* ---------------------------------------------
    15. DARK MODE — Hextra dark
    --------------------------------------------- */
-@media (prefers-color-scheme: dark) {
-  body {
-    /* Surfaces */
-    --sketch-bg: #111111;
-    --sketch-bg-lines: #1a1a1a;
-    --sketch-card: #1f1f1f;
 
-    /* Text */
-    --sketch-foreground: #f3f4f6;
-    --sketch-muted: #9ca3af;
+/* === DARK MODE VARIABLES e RULES === */
+/* data-theme é definido inline no head.html (localStorage + prefers-color-scheme),
+   e sincronizado com o toggle do Gokarna. Não usamos @media para evitar conflito
+   entre preferência do SO e toggle manual. */
 
-    /* Accents (Hextra dark primary: hsl(204, 100%, 50%) ≈ #0ea5e9) */
-    --sketch-primary: #0ea5e9;
-    --sketch-secondary: #38bdf8;
-    --sketch-accent: #0ea5e9;
+html[data-theme="dark"] h1,
+html[data-theme="dark"] h2,
+html[data-theme="dark"] h3,
+html[data-theme="dark"] h4,
+html[data-theme="dark"] h5,
+html[data-theme="dark"] h6 {
+  color: #f1f5f9;
+}
 
-    /* Structural */
-    --sketch-border: #404040;
-  }
+html[data-theme="dark"] .list-title,
+html[data-theme="dark"] .posts-year {
+  border-bottom-color: #404040;
+}
 
-  /* Headings */
-  h1, h2, h3, h4, h5, h6 {
-    color: #f1f5f9;
-  }
+html[data-theme="dark"] .header {
+  background: rgba(17, 17, 17, 0.8);
+  backdrop-filter: blur(8px);
+  border-bottom-color: var(--sketch-border);
+}
 
-  /* Dark mode: dividers */
-  .list-title,
-  .posts-year {
-    border-bottom-color: #404040;
-  }
+html[data-theme="dark"] .nav-brand {
+  color: #f1f5f9 !important;
+}
 
-  /* Dark mode: navbar blur */
-  .header {
-    background: rgba(17, 17, 17, 0.8);
-    backdrop-filter: blur(8px);
-    border-bottom-color: var(--sketch-border);
-  }
+html[data-theme="dark"] .nav-link a {
+  color: #d1d5db;
+}
 
-  .nav-brand {
-    color: #f1f5f9 !important;
-  }
+html[data-theme="dark"] body {
+  background-image:
+    radial-gradient(ellipse at 20% 50%, rgba(243, 244, 246, 0.02) 0%, transparent 50%),
+    radial-gradient(ellipse at 80% 20%, rgba(243, 244, 246, 0.015) 0%, transparent 40%),
+    radial-gradient(ellipse at 50% 80%, rgba(243, 244, 246, 0.01) 0%, transparent 45%),
+    url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.02'/%3E%3C/svg%3E");
+}
 
-  .nav-link a {
-    color: #d1d5db;
-  }
+html[data-theme="dark"] {
+  background-color: var(--sketch-bg);
+}
 
-  /* Dark mode: noise ajustado */
-  body {
-    background-image:
-      radial-gradient(ellipse at 20% 50%, rgba(243, 244, 246, 0.02) 0%, transparent 50%),
-      radial-gradient(ellipse at 80% 20%, rgba(243, 244, 246, 0.015) 0%, transparent 40%),
-      radial-gradient(ellipse at 50% 80%, rgba(243, 244, 246, 0.01) 0%, transparent 45%),
-      url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.02'/%3E%3C/svg%3E");
-  }
+html[data-theme="dark"] .sketch-divider {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='810' height='24'%3E%3Cpath d='M 0 12 Q 50.6 4, 101.2 12 T 202.5 12 T 303.7 12 T 405 12 T 506.2 12 T 607.5 12 T 708.7 12 T 810 12' stroke='%23404040' stroke-width='2.5' fill='none' opacity='0.5' stroke-linecap='round'/%3E%3C/svg%3E");
+}
 
-  html {
-    background-color: var(--sketch-bg);
-  }
+html[data-theme="dark"] .list-posts,
+html[data-theme="dark"] .post.container {
+  box-shadow: 6px 6px 0px rgba(243, 244, 246, 0.06);
+}
 
-  /* Dark mode: divider */
-  .sketch-divider {
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='810' height='24'%3E%3Cpath d='M 0 12 Q 50.6 4, 101.2 12 T 202.5 12 T 303.7 12 T 405 12 T 506.2 12 T 607.5 12 T 708.7 12 T 810 12' stroke='%23404040' stroke-width='2.5' fill='none' opacity='0.5' stroke-linecap='round'/%3E%3C/svg%3E");
-  }
+html[data-theme="dark"] .prev-link,
+html[data-theme="dark"] .next-link {
+  box-shadow: 3px 3px 0px rgba(243, 244, 246, 0.05);
+}
 
-  /* Dark mode: box-shadows */
-  .list-posts,
-  .post.container {
-    box-shadow: 6px 6px 0px rgba(243, 244, 246, 0.06);
-  }
+html[data-theme="dark"] .prev-link:hover,
+html[data-theme="dark"] .next-link:hover {
+  box-shadow: 1px 1px 0px rgba(14, 165, 233, 0.05);
+}
 
-  .prev-link, .next-link {
-    box-shadow: 3px 3px 0px rgba(243, 244, 246, 0.05);
-  }
+html[data-theme="dark"] .footer {
+  box-shadow: -3px -3px 0px rgba(243, 244, 246, 0.03);
+}
 
-  .prev-link:hover, .next-link:hover {
-    box-shadow: 1px 1px 0px rgba(14, 165, 233, 0.05);
-  }
+html[data-theme="dark"] .tag {
+  box-shadow: 2px 2px 0px rgba(243, 244, 246, 0.04);
+}
 
-  .footer {
-    box-shadow: -3px -3px 0px rgba(243, 244, 246, 0.03);
-  }
+html[data-theme="dark"] .tag:hover {
+  box-shadow: 1px 1px 0px rgba(14, 165, 233, 0.04);
+}
 
-  .tag {
-    box-shadow: 2px 2px 0px rgba(243, 244, 246, 0.04);
-  }
+html[data-theme="dark"] blockquote {
+  box-shadow: 3px 3px 0px rgba(243, 244, 246, 0.03);
+}
 
-  .tag:hover {
-    box-shadow: 1px 1px 0px rgba(14, 165, 233, 0.04);
-  }
+html[data-theme="dark"] pre {
+  box-shadow: 4px 4px 0px rgba(243, 244, 246, 0.04);
+}
 
-  blockquote {
-    box-shadow: 3px 3px 0px rgba(243, 244, 246, 0.03);
-  }
+html[data-theme="dark"] code {
+  border-color: rgba(243, 244, 246, 0.08);
+  color: #d1d5db;
+}
 
-  pre {
-    box-shadow: 4px 4px 0px rgba(243, 244, 246, 0.04);
-  }
-
-  code {
-    border-color: rgba(243, 244, 246, 0.08);
-    color: #d1d5db;
-  }
-
-  /* Dark mode: responsive */
-  @media (max-width: 768px) {
-    .list-posts {
-      box-shadow: 4px 4px 0px rgba(243, 244, 246, 0.05);
-    }
+@media (max-width: 768px) {
+  html[data-theme="dark"] .list-posts {
+    box-shadow: 4px 4px 0px rgba(243, 244, 246, 0.05);
   }
 }
