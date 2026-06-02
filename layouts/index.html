@@ -1,0 +1,22 @@
+{{ define "main" }}
+<section class="home-about">
+    <h1>{{ .Site.Title }}</h1>
+</section>
+
+<div class="home-posts">
+{{ $posts := where (where .Site.RegularPages "Section" "posts") "Params.type" "post" }}
+
+{{ range $posts.GroupByDate "2006" }}
+{{ range .Pages.GroupByDate "January" }}
+<h2 class="posts-year">{{ (time.Format "2006" (index .Pages 0).Date) }} — {{ (time.Format "January" (index .Pages 0).Date) | title }}</h2>
+<ul class="post-list">
+    {{ range .Pages.ByDate.Reverse }}
+    <li class="post-item">
+        <a href="{{ .Permalink }}">{{ .Title | markdownify }}</a>
+    </li>
+    {{ end }}
+</ul>
+{{ end }}
+{{ end }}
+</div>
+{{ end }}

@@ -1,0 +1,49 @@
+baseURL = '/'
+locale = 'pt-br'
+title = 'MII Chronicles'
+theme = 'gokarna'
+
+[params]
+  avatarURL = "/images/avatar.webp"
+  avatarSize = "size-l"
+  favicon = "/favicon.ico"
+  customHeadHTML = '<link rel="icon" type="image/svg+xml" href="/favicon.svg"><link rel="stylesheet" type="text/css" href="/css/custom.css">'
+  
+  [params.meta]
+    description = "Blog pessoal com posts sobre tecnologia, viagens e aprendizado. Migração do antigo blog A Table for Two."
+    keywords = "blog, tecnologia, viagens, aprendizado, hugo, gokarna"
+  
+  [params.nav]
+    about = "/#about"
+    posts = "/posts/"
+    tft = "/tft/"
+    tags = "/tags/"
+
+[menu]
+  [[menu.main]]
+    identifier = "home"
+    name = "Home"
+    url = "/"
+    weight = 10
+  [[menu.main]]
+    identifier = "posts"
+    name = "Posts"
+    url = "/posts/"
+    weight = 20
+  [[menu.main]]
+    identifier = "tft"
+    name = "TFT"
+    url = "/tft/"
+    weight = 30
+  [[menu.main]]
+    identifier = "tags"
+    name = "Tags"
+    url = "/tags/"
+    weight = 40
+
+[taxonomies]
+  tag = "tags"
+
+[markup]
+  [markup.highlight]
+    noClasses = false

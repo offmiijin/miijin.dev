@@ -1,0 +1,10 @@
+<footer class="footer">
+    {{ if .Site.Params.CustomFooterHTML }}
+    {{ .Site.Params.CustomFooterHTML | safeHTML }}
+    {{ end }}
+
+    <span>
+        Made with &#10084;&#65039; using <a target="_blank" href="https://github.com/gokarna-theme/gokarna-hugo">Gokarna</a>
+    </span>
+    <span>&copy; 2026 Kennedy Miyake &mdash; Todos os direitos reservados</span>
+</footer>
