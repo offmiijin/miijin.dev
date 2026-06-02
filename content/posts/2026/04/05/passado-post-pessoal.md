@@ -4,7 +4,6 @@ lastmod: 2026-04-05
 showTableOfContents: false
 tags: ["teste", "blog"]
 title: "Passado Post Pessoal"
-type: "post"
 ---
 
 Este é um post de exemplo para testar a separação entre `posts/` e `tft/posts/`.

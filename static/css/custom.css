@@ -1,8 +1,8 @@
-/* Custom CSS for MII Chronicles */
+/* Custom CSS for MII Chronicles — complementos do tema TFT */
 
-/* Adjust accent color to match the blog's theme */
+/* Accent color para toggle de tema (usado pelo Gokarna JS) */
 :root {
-    --accent-color: #2c3e50;
+    --accent-color: #2563eb;
 }
 
 /* Smooth transitions for theme toggle */
@@ -10,119 +10,7 @@
     transition: all 0.3s ease;
 }
 
-/* Enhanced avatar styling */
-.avatar img {
-    border-radius: 50%;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
-}
-
+/* Avatar hover effect (não conflita com TFT) */
 .avatar img:hover {
     transform: scale(1.05);
-}
-
-/* Custom footer styling */
-.footer {
-    width: 100%;
-    margin-left: 0;
-    border-top: 1px solid #e9ecef;
-}
-
-/* Enhanced link styling */
-a {
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-a:hover {
-    color: #3498db;
-}
-
-/* Navigation menu hover effects */
-.nav-item a:hover {
-    color: #3498db;
-    text-decoration: underline;
-}
-
-/* Blockquote styling */
-blockquote {
-    border-left: 4px solid #2c3e50;
-    padding-left: 1rem;
-    margin-left: 0;
-    font-style: italic;
-    color: #555;
-}
-
-/* Code block styling */
-pre {
-    background-color: #f8f9fa;
-    border: 1px solid #e9ecef;
-    border-radius: 4px;
-    padding: 1rem;
-    overflow-x: auto;
-}
-
-code {
-    background-color: #f8f9fa;
-    padding: 0.2rem 0.4rem;
-    border-radius: 3px;
-    font-family: 'Courier New', monospace;
-}
-
-/* Year/month divider — border on heading like akitaonrails */
-.list-posts .posts-year {
-    margin-top: 2rem;
-    border-bottom: 1px solid var(--accent-color);
-    padding-bottom: 0.25rem;
-}
-
-.home-posts h2.posts-year {
-    margin-top: 2rem;
-    border-bottom: 1px solid var(--accent-color);
-    padding-bottom: 0.25rem;
-}
-
-/* Home content section styling */
-.home-content h1 {
-    color: #2c3e50;
-    margin-bottom: 1rem;
-}
-
-.home-content h2 {
-    color: #34495e;
-    margin-top: 2rem;
-    margin-bottom: 1rem;
-}
-
-.home-content h3 {
-    color: #555;
-    margin-top: 1.5rem;
-    margin-bottom: 0.8rem;
-}
-
-/* Content section styling */
-.content-container {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 0 1rem;
-}
-
-/* Mobile responsiveness */
-@media (max-width: 768px) {
-    :root {
-        --content-width: 100%;
-        --container-width: 95%;
-    }
-    
-    .home-content {
-        padding: 0 1rem;
-    }
-    
-    .home-content h1 {
-        font-size: 2rem;
-    }
-    
-    .home-content h2 {
-        font-size: 1.5rem;
-    }
 }

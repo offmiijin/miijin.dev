@@ -5,7 +5,6 @@ lastmod: 2026-01-21
 showTableOfContents: false
 tags: ["exemplo", "teste"]
 title: "Post de Exemplo — Janeiro"
-type: "post"
 ---
 
 Este é um post de exemplo criado em **21 de Janeiro de 2026** para validar que a renderização por mês está funcionando corretamente.

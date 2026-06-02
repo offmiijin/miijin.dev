@@ -1,0 +1,20 @@
+{{ define "main"}}
+
+<div class="container tags-list text-404" style="text-align: center;">
+  <h1 class="list-title">404 — Página não encontrada</h1>
+  <h2 class="error-emoji" style="font-size: 2.5rem;"></h2>
+  <p class="post-description">
+    Volte para a <a href="{{ .Site.BaseURL }}">página inicial</a>.
+  </p>
+</div>
+<script>
+  const errorEmojiContainer = document.getElementsByClassName('error-emoji')[0];
+  const emojiArray = [
+    '\\(o_o)/', '(o^^)o', '(˚Δ˚)b', '(^-^*)', '(≥o≤)', '(^_^)b', '(·_·)',
+    '(=\'X\'=)', '(>_<)', '(;-;)', '\\(^Д^)/',
+  ];
+  const errorEmoji = emojiArray[Math.floor(Math.random() * emojiArray.length)];
+  errorEmojiContainer.appendChild(document.createTextNode(errorEmoji));
+</script>
+
+{{ end }}

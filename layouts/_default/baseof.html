@@ -8,9 +8,7 @@
 
     {{- partial "head.html" . -}}
     <body>
-        {{- if eq .Section "tft" }}
         {{- partial "tft-filters.html" . -}}
-        {{- end }}
         <script>
             // Immediately set theme on page load
             setThemeByUserPref();
