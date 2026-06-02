@@ -5,7 +5,6 @@ lastmod: 2026-03-08
 showTableOfContents: false
 tags: ["apresentação", "blog", "conhecimento", "desenvolvimento"]
 title: "Uma Mesa e Duas Cadeiras, Eu e Você"
-type: "post"
 slug: "uma-mesa-e-duas-cadeiras-eu-e-voce"
 aliases: [
   "/2026/03/08/uma-mesa-e-duas-cadeiras-eu-e-voce/",

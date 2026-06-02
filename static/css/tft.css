@@ -22,6 +22,11 @@ body {
   --font-body: 'Patrick Hand', 'Kalam', cursive;
 }
 
+/* Espaço para o footer absoluto */
+body {
+  margin-bottom: 8rem;
+}
+
 /* ---------------------------------------------
    2. BACKGROUND — Papel amassado
    --------------------------------------------- */
@@ -37,6 +42,12 @@ body {
   font-family: var(--font-body);
   font-size: 1.15rem;
   line-height: 1.6;
+}
+
+/* html herda o fundo do body e preenche viewport */
+html {
+  background-color: var(--sketch-bg);
+  min-height: 100vh;
 }
 
 /* ---------------------------------------------
@@ -89,7 +100,6 @@ p a:hover, .post-content a:hover, .list-posts a:hover {
 .header {
   background: var(--sketch-card);
   border-bottom: 2px solid var(--sketch-border);
-  border-radius: 0 0 95% 4% / 0 0 100% 6%;
   box-shadow: 3px 3px 0px rgba(45, 55, 72, 0.15);
   padding-bottom: 8px;
 }
@@ -118,6 +128,15 @@ p a:hover, .post-content a:hover, .list-posts a:hover {
 .nav-link a:hover {
   color: var(--sketch-secondary);
   background: none;
+}
+
+/* Hamburger menu */
+.nav-hamburger-list {
+  background: var(--sketch-card);
+}
+
+.nav-item a {
+  font-family: var(--font-heading);
 }
 
 /* ---------------------------------------------
@@ -181,12 +200,21 @@ p a:hover, .post-content a:hover, .list-posts a:hover {
   margin-top: 2rem;
   padding-bottom: 0.3rem;
   border-bottom: 2px solid var(--sketch-border);
-  border-radius: 0 0 95% 4% / 0 0 100% 6%;
 }
 
 /* ---------------------------------------------
    8. POST INDIVIDUAL
    --------------------------------------------- */
+.post.container {
+  background: var(--sketch-card);
+  border: 2px solid var(--sketch-border);
+  border-radius: 255px 15px 225px 15px / 15px 225px 15px 255px;
+  box-shadow: 6px 6px 0px var(--sketch-primary);
+  padding: 2rem;
+  margin: 2rem auto;
+  max-width: 800px;
+}
+
 .post-header-section h1 {
   font-size: 2rem;
   margin-bottom: 0.5rem;
@@ -227,7 +255,6 @@ p a:hover, .post-content a:hover, .list-posts a:hover {
   margin-top: 3rem;
   padding-top: 1.5rem;
   border-top: 2px solid var(--sketch-border);
-  border-radius: 95% 4% 0 0 / 100% 6% 0 0;
 }
 
 .prev-link, .next-link {
@@ -267,14 +294,19 @@ p a:hover, .post-content a:hover, .list-posts a:hover {
    10. FOOTER
    --------------------------------------------- */
 .footer {
+  position: absolute !important;
+  bottom: 0 !important;
+  left: 0 !important;
+  margin-left: 0 !important;
+  width: 100% !important;
   background: var(--sketch-card);
   border-top: 2px solid var(--sketch-border);
-  border-radius: 95% 4% 0 0 / 6% 100% 0 0;
   box-shadow: -3px -3px 0px rgba(45, 55, 72, 0.1);
-  padding-top: 2rem;
+  padding: 2rem 0;
   color: var(--sketch-muted);
   font-family: var(--font-body);
   font-size: 0.95rem;
+  box-sizing: border-box;
 }
 
 .footer a {
@@ -290,6 +322,17 @@ p a:hover, .post-content a:hover, .list-posts a:hover {
 /* ---------------------------------------------
    11. TAGS
    --------------------------------------------- */
+/* Desativa estilo padrão do Gokarna para tags */
+.post-tags .post-tag {
+  border: none;
+  border-radius: 0;
+  background: none;
+}
+
+.post-tags .post-tag a {
+  padding: 0;
+}
+
 .tag {
   display: inline-block;
   font-family: var(--font-heading);
@@ -389,5 +432,9 @@ pre code {
     --sketch-accent: #ff6b6b;
     --sketch-muted: #9ca3af;
     --sketch-border: #e0ddd5;
+  }
+
+  html {
+    background-color: var(--sketch-bg);
   }
 }

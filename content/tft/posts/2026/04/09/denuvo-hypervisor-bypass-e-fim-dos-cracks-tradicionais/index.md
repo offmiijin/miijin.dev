@@ -5,7 +5,6 @@ lastmod: 2026-04-09
 showTableOfContents: false
 tags: ["windows", "pirataria", "segurança", "tecnologia", "denuvo", "crack"]
 title: "DENUVO, HyperVisor Bypass e Fim dos Cracks Tradicionais"
-type: "post"
 slug: "denuvo-hypervisor-bypass-e-fim-dos-cracks-tradicionais"
 aliases: [
   "/2026/04/09/denuvo-hypervisor-bypass-e-fim-dos-cracks-tradicionais/",

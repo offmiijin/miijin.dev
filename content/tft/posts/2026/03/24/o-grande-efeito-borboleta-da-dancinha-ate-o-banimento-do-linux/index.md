@@ -5,7 +5,6 @@ lastmod: 2026-03-24
 showTableOfContents: false
 tags: ["linux", "notícia", "opensource", "tecnologia", "lei", "brasil"]
 title: "O Grande Efeito Borboleta — Da Dancinha Até O Banimento Do Linux"
-type: "post"
 slug: "o-grande-efeito-borboleta-da-dancinha-ate-o-banimento-do-linux"
 aliases: [
   "/2026/03/24/o-grande-efeito-borboleta-da-dancinha-ate-o-banimento-do-linux/",
