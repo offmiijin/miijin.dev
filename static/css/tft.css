@@ -7,10 +7,10 @@
    1. VARIÁVEIS (tema sketch)
    --------------------------------------------- */
 body {
-  --sketch-bg: #FDFBF7;
-  --sketch-bg-lines: #F5F0E8;
+  --sketch-bg: #ffffff;
+  --sketch-bg-lines: #f8f9fa;
   --sketch-foreground: #2D2D2D;
-  --sketch-card: #FFFDF7;
+  --sketch-card: #ffffff;
   --sketch-primary: #2D3748;
   --sketch-secondary: #2D5DA1;
   --sketch-accent: #C53030;
@@ -423,10 +423,10 @@ pre code {
    --------------------------------------------- */
 @media (prefers-color-scheme: dark) {
   body {
-    --sketch-bg: #1a1a2e;
-    --sketch-bg-lines: #252540;
+    --sketch-bg: #22272e;
+    --sketch-bg-lines: #2d333b;
     --sketch-foreground: #e0ddd5;
-    --sketch-card: #1e1e35;
+    --sketch-card: #22272e;
     --sketch-primary: #4a5568;
     --sketch-secondary: #6b9fff;
     --sketch-accent: #ff6b6b;
