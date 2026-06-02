@@ -89,17 +89,11 @@ a:hover {
   color: var(--sketch-accent);
 }
 
-/* Underline ondulado (wavy) */
-p a, .post-content a, .list-posts a {
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='8'%3E%3Cpath d='M0 6 Q 12.5 2, 25 6 T 50 6 T 75 6 T 100 6' stroke='%232563eb' stroke-width='1.5' fill='none' opacity='0.5'/%3E%3C/svg%3E");
-  background-repeat: repeat-x;
-  background-position: bottom;
-  background-size: 50px 6px;
-  padding-bottom: 4px;
-}
-
+/* Links sem underline nem decoração visual */
+p a, .post-content a, .list-posts a,
 p a:hover, .post-content a:hover, .list-posts a:hover {
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='8'%3E%3Cpath d='M0 6 Q 12.5 2, 25 6 T 50 6 T 75 6 T 100 6' stroke='%231d4ed8' stroke-width='1.5' fill='none' opacity='0.6'/%3E%3C/svg%3E");
+  background: none;
+  padding-bottom: 0;
 }
 
 /* ---------------------------------------------
@@ -110,11 +104,22 @@ p a:hover, .post-content a:hover, .list-posts a:hover {
   backdrop-filter: blur(8px);
   border-bottom: 1px solid var(--sketch-border);
   box-shadow: 3px 3px 0px rgba(37, 99, 235, 0.06);
-  padding-bottom: 8px;
+  display: flex;
+  align-items: center;
 }
 
 .header-nav {
   font-family: var(--font-heading);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
 }
 
 .nav-brand {
@@ -483,15 +488,6 @@ pre code {
 
   html {
     background-color: var(--sketch-bg);
-  }
-
-  /* Dark mode: underlines SVG */
-  p a, .post-content a, .list-posts a {
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='8'%3E%3Cpath d='M0 6 Q 12.5 2, 25 6 T 50 6 T 75 6 T 100 6' stroke='%2338bdf8' stroke-width='1.5' fill='none' opacity='0.5'/%3E%3C/svg%3E");
-  }
-
-  p a:hover, .post-content a:hover, .list-posts a:hover {
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='8'%3E%3Cpath d='M0 6 Q 12.5 2, 25 6 T 50 6 T 75 6 T 100 6' stroke='%230ea5e9' stroke-width='1.5' fill='none' opacity='0.6'/%3E%3C/svg%3E");
   }
 
   /* Dark mode: divider */
