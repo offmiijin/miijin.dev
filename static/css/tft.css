@@ -1,0 +1,393 @@
+/* =============================================
+   TFT — Sketch / Hand-Drawn Theme
+   Carregado condicionalmente na seção tft/
+   ============================================= */
+
+/* ---------------------------------------------
+   1. VARIÁVEIS (tema sketch)
+   --------------------------------------------- */
+body {
+  --sketch-bg: #FDFBF7;
+  --sketch-bg-lines: #F5F0E8;
+  --sketch-foreground: #2D2D2D;
+  --sketch-card: #FFFDF7;
+  --sketch-primary: #2D3748;
+  --sketch-secondary: #2D5DA1;
+  --sketch-accent: #C53030;
+  --sketch-muted: #6B7280;
+  --sketch-border: #2D2D2D;
+
+  /* Fontes manuscritas */
+  --font-heading: 'Kalam', 'Patrick Hand', cursive;
+  --font-body: 'Patrick Hand', 'Kalam', cursive;
+}
+
+/* ---------------------------------------------
+   2. BACKGROUND — Papel amassado
+   --------------------------------------------- */
+body {
+  background-color: var(--sketch-bg);
+  background-image:
+    radial-gradient(ellipse at 20% 50%, rgba(200, 190, 170, 0.15) 0%, transparent 50%),
+    radial-gradient(ellipse at 80% 20%, rgba(190, 180, 160, 0.12) 0%, transparent 40%),
+    radial-gradient(ellipse at 50% 80%, rgba(210, 200, 180, 0.1) 0%, transparent 45%),
+    url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.08'/%3E%3C/svg%3E");
+  background-size: 100% 100%, 100% 100%, 100% 100%, 256px 256px;
+  color: var(--sketch-foreground);
+  font-family: var(--font-body);
+  font-size: 1.15rem;
+  line-height: 1.6;
+}
+
+/* ---------------------------------------------
+   3. TIPOGRAFIA
+   --------------------------------------------- */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  color: var(--sketch-foreground);
+  letter-spacing: 0.02em;
+}
+
+h1 { font-size: 2.2rem; margin-bottom: 0.8em; }
+h2 { font-size: 1.8rem; margin-bottom: 0.6em; }
+h3 { font-size: 1.4rem; margin-bottom: 0.5em; }
+
+p, li {
+  font-family: var(--font-body);
+  color: var(--sketch-foreground);
+}
+
+/* ---------------------------------------------
+   4. LINKS
+   --------------------------------------------- */
+a {
+  color: var(--sketch-secondary);
+  text-decoration: none;
+  position: relative;
+}
+
+a:hover {
+  color: var(--sketch-accent);
+}
+
+/* Underline ondulado (wavy) */
+p a, .post-content a, .list-posts a {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='8'%3E%3Cpath d='M0 6 Q 12.5 2, 25 6 T 50 6 T 75 6 T 100 6' stroke='%232D5DA1' stroke-width='1.5' fill='none' opacity='0.5'/%3E%3C/svg%3E");
+  background-repeat: repeat-x;
+  background-position: bottom;
+  background-size: 50px 6px;
+  padding-bottom: 4px;
+}
+
+p a:hover, .post-content a:hover, .list-posts a:hover {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='8'%3E%3Cpath d='M0 6 Q 12.5 2, 25 6 T 50 6 T 75 6 T 100 6' stroke='%23C53030' stroke-width='1.5' fill='none' opacity='0.6'/%3E%3C/svg%3E");
+}
+
+/* ---------------------------------------------
+   5. NAVEGAÇÃO (header)
+   --------------------------------------------- */
+.header {
+  background: var(--sketch-card);
+  border-bottom: 2px solid var(--sketch-border);
+  border-radius: 0 0 95% 4% / 0 0 100% 6%;
+  box-shadow: 3px 3px 0px rgba(45, 55, 72, 0.15);
+  padding-bottom: 8px;
+}
+
+.header-nav {
+  font-family: var(--font-heading);
+}
+
+.nav-brand {
+  font-family: var(--font-heading);
+  font-size: 1.4rem;
+  color: var(--sketch-foreground) !important;
+}
+
+.nav-brand:hover {
+  color: var(--sketch-accent) !important;
+}
+
+.nav-link a {
+  font-family: var(--font-heading);
+  color: var(--sketch-foreground);
+  background: none;
+  padding: 0;
+}
+
+.nav-link a:hover {
+  color: var(--sketch-secondary);
+  background: none;
+}
+
+/* ---------------------------------------------
+   6. CONTAINER PRINCIPAL (lista)
+   --------------------------------------------- */
+.list-posts {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: var(--sketch-card);
+  border: 2px solid var(--sketch-border);
+  border-radius: 255px 15px 225px 15px / 15px 225px 15px 255px;
+  box-shadow: 6px 6px 0px var(--sketch-primary);
+}
+
+.list-title {
+  font-family: var(--font-heading);
+  font-size: 2rem;
+  border-bottom: 2px solid var(--sketch-border);
+  border-radius: 0 0 255px 15px / 0 0 15px 225px;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+/* ---------------------------------------------
+   7. POST ITEM (na lista)
+   --------------------------------------------- */
+.post-item {
+  padding: 0.4rem 0;
+  border-bottom: 1px dashed var(--sketch-muted);
+}
+
+.post-item:last-child {
+  border-bottom: none;
+}
+
+.post-item a {
+  font-family: var(--font-body);
+  font-size: 1.1rem;
+  color: var(--sketch-foreground);
+  background: none;
+  padding: 0;
+}
+
+.post-item a:hover {
+  color: var(--sketch-secondary);
+  background: none;
+}
+
+.post-date {
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  color: var(--sketch-muted);
+  margin-right: 0.5rem;
+}
+
+/* Separador por ano */
+.posts-year {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  margin-top: 2rem;
+  padding-bottom: 0.3rem;
+  border-bottom: 2px solid var(--sketch-border);
+  border-radius: 0 0 95% 4% / 0 0 100% 6%;
+}
+
+/* ---------------------------------------------
+   8. POST INDIVIDUAL
+   --------------------------------------------- */
+.post-header-section h1 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.post-date {
+  font-family: var(--font-heading);
+  font-size: 0.95rem;
+  color: var(--sketch-muted);
+}
+
+.post-icon {
+  font-size: 1.1rem;
+  margin-right: 0.25rem;
+}
+
+.post-description {
+  font-style: italic;
+  color: var(--sketch-muted);
+  margin: 0.8rem 0;
+  font-family: var(--font-body);
+}
+
+.post-content {
+  font-family: var(--font-body);
+  font-size: 1.1rem;
+  line-height: 1.7;
+}
+
+.post-content h2, .post-content h3 {
+  margin-top: 2rem;
+}
+
+.sketch-nav {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: 3rem;
+  padding-top: 1.5rem;
+  border-top: 2px solid var(--sketch-border);
+  border-radius: 95% 4% 0 0 / 100% 6% 0 0;
+}
+
+.prev-link, .next-link {
+  font-family: var(--font-heading);
+  color: var(--sketch-foreground);
+  background: none;
+  padding: 0;
+  border: 2px solid var(--sketch-border);
+  border-radius: 255px 15px 225px 15px / 15px 225px 15px 255px;
+  padding: 0.5rem 1rem;
+  box-shadow: 3px 3px 0px rgba(45, 55, 72, 0.15);
+  transition: all 0.1s ease;
+  display: inline-block;
+}
+
+.prev-link:hover, .next-link:hover {
+  color: var(--sketch-secondary);
+  transform: translate(2px, 2px);
+  box-shadow: 1px 1px 0px rgba(45, 55, 72, 0.15);
+  background: none;
+}
+
+/* ---------------------------------------------
+   9. SEPARADOR RABISCADO (divisor)
+   --------------------------------------------- */
+.sketch-divider {
+  border: none;
+  height: 24px;
+  margin: 2rem auto;
+  max-width: 400px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='24'%3E%3Cpath d='M 0 12 Q 20 8, 40 12 T 80 12 T 120 12 T 160 12 T 200 12 T 240 12 T 280 12 T 320 12 T 360 12 T 400 12' stroke='%232D2D2D' stroke-width='2' fill='none' opacity='0.4' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* ---------------------------------------------
+   10. FOOTER
+   --------------------------------------------- */
+.footer {
+  background: var(--sketch-card);
+  border-top: 2px solid var(--sketch-border);
+  border-radius: 95% 4% 0 0 / 6% 100% 0 0;
+  box-shadow: -3px -3px 0px rgba(45, 55, 72, 0.1);
+  padding-top: 2rem;
+  color: var(--sketch-muted);
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+}
+
+.footer a {
+  color: var(--sketch-secondary);
+  background: none;
+  padding: 0;
+}
+
+.footer a:hover {
+  color: var(--sketch-accent);
+}
+
+/* ---------------------------------------------
+   11. TAGS
+   --------------------------------------------- */
+.tag {
+  display: inline-block;
+  font-family: var(--font-heading);
+  font-size: 0.85rem;
+  background: var(--sketch-bg-lines);
+  border: 1.5px solid var(--sketch-foreground);
+  border-radius: 85% 15% 80% 20% / 15% 85% 15% 85%;
+  padding: 2px 10px;
+  margin: 2px;
+  color: var(--sketch-foreground);
+  box-shadow: 2px 2px 0px rgba(45, 55, 72, 0.15);
+}
+
+.tag:hover {
+  transform: translate(1px, 1px);
+  box-shadow: 1px 1px 0px rgba(45, 55, 72, 0.15);
+  color: var(--sketch-secondary);
+}
+
+/* ---------------------------------------------
+   12. BLOCKQUOTE (estilo anotação)
+   --------------------------------------------- */
+blockquote {
+  border-left: 3px solid var(--sketch-foreground);
+  border-radius: 0 85% 15% 85% / 85% 15% 85% 15%;
+  padding: 1rem 1.5rem;
+  margin: 1.5rem 0;
+  background: var(--sketch-bg-lines);
+  font-style: italic;
+  color: var(--sketch-muted);
+  box-shadow: 3px 3px 0px rgba(45, 55, 72, 0.1);
+}
+
+/* ---------------------------------------------
+   13. CÓDIO (estilo escrito a mão)
+   --------------------------------------------- */
+code {
+  font-family: 'Courier New', monospace;
+  background: var(--sketch-bg-lines);
+  border: 1px solid rgba(45, 45, 45, 0.2);
+  border-radius: 6px 4px 8px 3px;
+  padding: 0.15em 0.4em;
+  font-size: 0.9em;
+}
+
+pre {
+  background: var(--sketch-bg-lines);
+  border: 2px solid var(--sketch-border);
+  border-radius: 85% 15% 80% 20% / 15% 85% 15% 85%;
+  box-shadow: 4px 4px 0px rgba(45, 55, 72, 0.15);
+  padding: 1.2rem;
+  overflow-x: auto;
+}
+
+pre code {
+  border: none;
+  background: none;
+  border-radius: 0;
+  padding: 0;
+}
+
+/* ---------------------------------------------
+   14. RESPONSIVIDADE
+   --------------------------------------------- */
+@media (max-width: 768px) {
+  .list-posts {
+    margin: 1rem;
+    padding: 1.2rem;
+    border-radius: 15px 8px 15px 8px / 8px 15px 8px 15px;
+    box-shadow: 4px 4px 0px var(--sketch-primary);
+  }
+
+  .list-title {
+    font-size: 1.6rem;
+  }
+
+  h1 { font-size: 1.8rem; }
+  h2 { font-size: 1.5rem; }
+  h3 { font-size: 1.2rem; }
+
+  body {
+    font-size: 1.05rem;
+  }
+}
+
+/* ---------------------------------------------
+   15. DARK MODE adjustments
+   --------------------------------------------- */
+@media (prefers-color-scheme: dark) {
+  body {
+    --sketch-bg: #1a1a2e;
+    --sketch-bg-lines: #252540;
+    --sketch-foreground: #e0ddd5;
+    --sketch-card: #1e1e35;
+    --sketch-primary: #4a5568;
+    --sketch-secondary: #6b9fff;
+    --sketch-accent: #ff6b6b;
+    --sketch-muted: #9ca3af;
+    --sketch-border: #e0ddd5;
+  }
+}
