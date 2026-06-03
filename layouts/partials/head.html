@@ -62,21 +62,17 @@
     {{ $jsBundle := resources.Match "js/**.js" | resources.Concat "js/bundle.js" | minify | resources.Fingerprint "sha256" }}
     <script src="{{ $jsBundle.RelPermalink }}" integrity="{{ $jsBundle.Data.Integrity }}"></script>
 
-    {{/* Sincroniza data-theme com o toggle de tema do Gokarna */}}
+    {{/* Previne flash: desabilita dark.css antes do body renderizar.
+         theme-toggle.js gerencia o toggle e listeners no evento 'load',
+         após o Gokarna registrar seus handlers (capture: true).
+         cloneNode + replaceChild remove os listeners antigos. */}}
     <script>
         (function() {
-            // O setTheme do bundle é function declaration local, não window.
-            // Escutamos o clique nos toggles e sincronizamos data-theme
-            // depois que o Gokarna já atualizou o localStorage.
-            document.addEventListener('click', function(e) {
-                var toggle = e.target.closest('.dark-theme-toggle');
-                if (toggle) {
-                    requestAnimationFrame(function() {
-                        var theme = localStorage.getItem('theme-preference') || 'light';
-                        document.documentElement.setAttribute('data-theme', theme);
-                    });
-                }
-            });
+            var css = document.getElementById('dark-theme');
+            if (!css) return;
+            var theme = localStorage.getItem('theme-preference') ||
+                (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+            css.disabled = theme === 'light';
         })();
     </script>
 

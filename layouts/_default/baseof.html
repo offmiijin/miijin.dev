@@ -9,9 +9,6 @@
     {{- partial "head.html" . -}}
     <body>
         {{- partial "tft-filters.html" . -}}
-        <script>
-            setThemeByUserPref();
-        </script>
         {{- partial "header.html" . -}}
         <main id="content">
         {{- block "main" . }}{{- end }}
