@@ -14,5 +14,67 @@
         {{- block "main" . }}{{- end }}
         </main>
         {{- partial "footer.html" . -}}
+        
+        <script>
+        (function() {
+            var path = window.location.pathname;
+            var isTftPage = path.startsWith('/tft/');
+            var isHomePage = path === '/' || path === '';
+            var isTagsPage = path.startsWith('/tags/');
+            var lastSection = sessionStorage.getItem('lastSection');
+
+            // Salva a seção atual
+            if (isTftPage) {
+                sessionStorage.setItem('lastSection', 'tft');
+            } else if (isHomePage) {
+                sessionStorage.setItem('lastSection', 'main');
+            }
+
+            // Se está em página transversal e tem um lastSection salvo, ajusta o header
+            if (isTagsPage && lastSection === 'tft') {
+                document.addEventListener('DOMContentLoaded', function() {
+                    var brand = document.querySelector('.nav-brand');
+                    if (brand) {
+                        brand.href = '/tft/';
+                        brand.textContent = 'A Table For Two';
+                    }
+
+                    // Menu desktop
+                    var navLinks = document.querySelector('.nav-links');
+                    if (!navLinks) return;
+
+                    var menuItems = navLinks.querySelectorAll('.nav-link:not(.dark-theme-toggle):not(#hamburger-menu-toggle)');
+                    menuItems.forEach(function(item) { item.remove(); });
+
+                    var divider = navLinks.querySelector('.nav-icons-divider');
+                    var tftMenu = '<div class="nav-link"><a href="/tft/posts/" aria-label="posts">Posts</a></div>' +
+                        '<div class="nav-link"><a href="/tft/articles/" aria-label="articles">Articles</a></div>' +
+                        '<div class="nav-link"><a href="/" aria-label="mii">MII</a></div>' +
+                        '<div class="nav-link"><a href="/tags/" aria-label="tags">Tags</a></div>';
+
+                    if (divider) {
+                        divider.insertAdjacentHTML('beforebegin', tftMenu);
+                    }
+
+                    // Menu mobile
+                    var mobileList = navLinks.querySelector('.nav-hamburger-list');
+                    if (mobileList) {
+                        var mobileItems = mobileList.querySelectorAll('.nav-item:not(.dark-theme-toggle)');
+                        mobileItems.forEach(function(item) { item.remove(); });
+
+                        var tftMobile = '<li class="nav-item"><a href="/tft/posts/">Posts</a></li>' +
+                            '<li class="nav-item"><a href="/tft/articles/">Articles</a></li>' +
+                            '<li class="nav-item"><a href="/">MII</a></li>' +
+                            '<li class="nav-item"><a href="/tags/">Tags</a></li>';
+
+                        var toggleItem = mobileList.querySelector('.dark-theme-toggle');
+                        if (toggleItem) {
+                            toggleItem.insertAdjacentHTML('beforebegin', tftMobile);
+                        }
+                    }
+                });
+            }
+        })();
+        </script>
     </body>
 </html>

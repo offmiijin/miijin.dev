@@ -2,15 +2,15 @@
     <nav class="header-nav">
 
         <div class="nav-title">
-            {{ if eq .Section "tft" }}
+            {{- if eq .Section "tft" -}}
             <a class="nav-brand" href="/tft/">A Table For Two</a>
-            {{ else }}
+            {{- else -}}
             <a class="nav-brand" href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a>
-            {{ end }}
+            {{- end -}}
         </div>
 
         <div class="nav-links">
-            {{ if eq .Section "tft" }}
+            {{- if eq .Section "tft" -}}
             {{/* TFT Menu */}}
             <div class="nav-link">
                 <a href="/tft/posts/" aria-label="posts">Posts</a>
@@ -24,19 +24,19 @@
             <div class="nav-link">
                 <a href="/tags/" aria-label="tags">Tags</a>
             </div>
-            {{ else }}
+            {{- else -}}
             {{/* Default Blog Menu */}}
-            {{ $isHome := eq .Title .Site.Title }}
-            {{ range .Site.Menus.main }}
-            {{ if ne .Identifier "home" }}
+            {{- $isHome := eq .Title .Site.Title -}}
+            {{- range .Site.Menus.main -}}
+            {{- if ne .Identifier "home" -}}
             <div class="nav-link">
                 <a href="{{ .URL | absURL }}" aria-label="{{ .Identifier }}">
                     {{- .Name -}}
                 </a>
             </div>
-            {{ end }}
-            {{ end }}
-            {{ end }}
+            {{- end -}}
+            {{- end -}}
+            {{- end -}}
 
             <span class="nav-icons-divider"></span>
             <div class="nav-link dark-theme-toggle">
@@ -55,20 +55,20 @@
 
             <!-- For mobile -->
             <ul class="nav-hamburger-list visibility-hidden">
-                {{ if eq .Section "tft" }}
+                {{- if eq .Section "tft" -}}
                 <li class="nav-item"><a href="/tft/posts/">Posts</a></li>
                 <li class="nav-item"><a href="/tft/articles/">Articles</a></li>
                 <li class="nav-item"><a href="/">MII</a></li>
                 <li class="nav-item"><a href="/tags/">Tags</a></li>
-                {{ else }}
-                {{ range .Site.Menus.main }}
-                {{ if ne .Identifier "home" }}
+                {{- else -}}
+                {{- range .Site.Menus.main -}}
+                {{- if ne .Identifier "home" -}}
                 <li class="nav-item">
                     <a href="{{ .URL | absURL }}">{{- .Name -}}</a>
                 </li>
-                {{ end }}
-                {{ end }}
-                {{ end }}
+                {{- end -}}
+                {{- end -}}
+                {{- end -}}
                 <li class="nav-item dark-theme-toggle">
                     <span class="sr-only dark-theme-toggle-screen-reader-target">theme</span>
                     <a role="switch">
