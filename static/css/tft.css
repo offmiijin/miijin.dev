@@ -170,6 +170,14 @@ p a:hover, .post-content a:hover, .list-posts a:hover {
   color: var(--sketch-accent) !important;
 }
 
+html[data-theme="dark"] .nav-brand {
+  color: #f3f4f6 !important;
+}
+
+html[data-theme="dark"] .nav-brand:hover {
+  color: var(--sketch-secondary) !important;
+}
+
 .nav-link a {
   font-family: var(--font-heading);
   color: #374151;
@@ -180,6 +188,34 @@ p a:hover, .post-content a:hover, .list-posts a:hover {
 .nav-link a:hover {
   color: var(--sketch-secondary);
   background: none;
+}
+
+html[data-theme="dark"] .nav-link a {
+  color: #d1d5db;
+}
+
+html[data-theme="dark"] .nav-link a:hover {
+  color: var(--sketch-secondary);
+}
+
+/* Theme toggle icon */
+.dark-theme-toggle {
+  display: flex;
+  align-items: center;
+}
+
+.dark-theme-toggle .feather {
+  color: #374151;
+  vertical-align: middle;
+}
+
+html[data-theme="dark"] .dark-theme-toggle .feather {
+  color: #d1d5db;
+}
+
+.dark-theme-toggle:hover .feather {
+  color: var(--sketch-secondary) !important;
+  fill: none !important;
 }
 
 /* Hamburger menu */
