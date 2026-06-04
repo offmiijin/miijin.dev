@@ -392,6 +392,31 @@ p a:hover, .post-content a:hover, .list-posts a:hover {
   color: var(--sketch-secondary);
 }
 
+/* Lista de tags na página /tags/ */
+.tags-section {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0 2rem 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.tags-section .tag {
+  font-size: 0.9rem;
+  padding: 4px 14px;
+}
+
+.tag-name {
+  font-weight: 500;
+}
+
+.tag-posts-count {
+  font-size: 0.75rem;
+  color: var(--sketch-muted);
+  margin-left: 4px;
+}
+
 /* ---------------------------------------------
    12. BLOCKQUOTE (estilo anotação)
    --------------------------------------------- */

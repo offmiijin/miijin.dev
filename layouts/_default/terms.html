@@ -1,21 +1,75 @@
 {{ define "main" }}
-<div class="container tags-list">
-
+<div class="container list-posts">
     <h1 class="list-title">{{ i18n "tags" }}</h1>
-    {{if eq (len $.Site.Taxonomies.tags) 0}}
-        {{ i18n "nothing" }}
-    {{else}}
-    <ul class="post-tags">
-        {{ range $.Site.Taxonomies.tags.ByCount }}
+
+    {{/* --- Tags do Blog Principal (posts/) --- */}}
+    {{ $blogPages := where .Site.RegularPages "Section" "posts" }}
+    {{ $blogTags := slice }}
+    {{ range $blogPages }}
+        {{ range .Params.tags }}
+            {{ $blogTags = $blogTags | append . }}
+        {{ end }}
+    {{ end }}
+    {{ $blogTagsUnique := $blogTags | uniq | sort }}
+
+    {{ if $blogTagsUnique }}
+    <h2 class="posts-year">Posts</h2>
+    <ul class="tags-section">
+        {{ range $blogTagsUnique }}
+        {{ $tagName := . }}
+        {{ $tagPage := $.Site.GetPage (printf "/tags/%s" ($tagName | urlize)) }}
+        {{ $count := 0 }}
+        {{ range $blogPages }}
+            {{ if in .Params.tags $tagName }}
+                {{ $count = add $count 1 }}
+            {{ end }}
+        {{ end }}
         <li class="tag">
-            <a href="{{ .Page.RelPermalink }}">
-                <div class="tag-name">{{ .Name }}</div>
-                <div class="tag-posts-count">{{ .Count }}</div>
+            <a href="{{ $tagPage.RelPermalink }}">
+                <span class="tag-name">{{ $tagName }}</span>
+                <span class="tag-posts-count">{{ $count }}</span>
             </a>
         </li>
         {{ end }}
     </ul>
     {{ end }}
 
+    <hr class="sketch-divider">
+
+    {{/* --- Tags TFT (tft/) --- */}}
+    {{ $tftPages := where .Site.RegularPages "Section" "tft" }}
+    {{ $tftTags := slice }}
+    {{ range $tftPages }}
+        {{ range .Params.tags }}
+            {{ $tftTags = $tftTags | append . }}
+        {{ end }}
+    {{ end }}
+    {{ $tftTagsUnique := $tftTags | uniq | sort }}
+
+    {{ if $tftTagsUnique }}
+    <h2 class="posts-year">TFT</h2>
+    <ul class="tags-section">
+        {{ range $tftTagsUnique }}
+        {{ $tagName := . }}
+        {{ $tagPage := $.Site.GetPage (printf "/tags/%s" ($tagName | urlize)) }}
+        {{ $count := 0 }}
+        {{ range $tftPages }}
+            {{ if in .Params.tags $tagName }}
+                {{ $count = add $count 1 }}
+            {{ end }}
+        {{ end }}
+        <li class="tag">
+            <a href="{{ $tagPage.RelPermalink }}">
+                <span class="tag-name">{{ $tagName }}</span>
+                <span class="tag-posts-count">{{ $count }}</span>
+            </a>
+        </li>
+        {{ end }}
+    </ul>
+    {{ end }}
+
+    {{ if and (not $blogTagsUnique) (not $tftTagsUnique) }}
+    <p>{{ i18n "nothing" }}</p>
+    {{ end }}
 </div>
 {{ end }}
