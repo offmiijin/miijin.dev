@@ -1,6 +1,6 @@
 baseURL = '/'
 locale = 'pt-br'
-title = 'MII Chronicles'
+title = 'MII'
 theme = 'gokarna'
 
 [params]
