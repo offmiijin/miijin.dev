@@ -1,4 +1,5 @@
 ---
+article: true
 date: 2026-04-09T21:18:36-03:00
 image: "/images/denuvo-bypass.jpg"
 lastmod: 2026-04-09
@@ -7,6 +8,7 @@ tags: ["windows", "pirataria", "segurança", "tecnologia", "denuvo", "crack"]
 title: "DENUVO, HyperVisor Bypass e Fim dos Cracks Tradicionais"
 slug: "denuvo-hypervisor-bypass-e-fim-dos-cracks-tradicionais"
 aliases: [
+  "/tft/posts/2026/04/09/denuvo-hypervisor-bypass-e-fim-dos-cracks-tradicionais/",
   "/2026/04/09/denuvo-hypervisor-bypass-e-fim-dos-cracks-tradicionais/",
   "/denuvo-hypervisor-bypass-e-fim-dos-cracks-tradicionais/"
 ]

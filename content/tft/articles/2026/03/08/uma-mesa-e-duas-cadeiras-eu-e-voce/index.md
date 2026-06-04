@@ -1,4 +1,5 @@
 ---
+article: true
 date: 2026-03-08T14:39:21-03:00
 image: "/images/tft-introducao.jpg"
 lastmod: 2026-03-08
@@ -7,6 +8,7 @@ tags: ["apresentação", "blog", "conhecimento", "desenvolvimento"]
 title: "Uma Mesa e Duas Cadeiras, Eu e Você"
 slug: "uma-mesa-e-duas-cadeiras-eu-e-voce"
 aliases: [
+  "/tft/posts/2026/03/08/uma-mesa-e-duas-cadeiras-eu-e-voce/",
   "/2026/03/08/uma-mesa-e-duas-cadeiras-eu-e-voce/",
   "/uma-mesa-e-duas-cadeiras-eu-e-voce/"
 ]

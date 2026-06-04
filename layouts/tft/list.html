@@ -1,8 +1,13 @@
 {{ define "main" }}
 <div class="container list-posts">
     <h1 class="list-title">{{ .Title }}</h1>
+
+    {{/* Lista todos os artigos TFT (regular pages), mesmo aninhados em subseções */}}
+    {{ $pages := where .Site.RegularPages "Section" "tft" }}
+
+    {{ if $pages }}
     {{ $first := true }}
-    {{ range .Pages.GroupByDate "2006" }}
+    {{ range $pages.GroupByDate "2006" }}
     {{ range .Pages.GroupByDate "January" }}
     {{ if not $first }}
     <hr class="sketch-divider">
@@ -18,6 +23,9 @@
         {{ end }}
     </ul>
     {{ end }}
+    {{ end }}
+    {{ else }}
+    <p>{{ i18n "nothing" }}</p>
     {{ end }}
 </div>
 {{ end }}
