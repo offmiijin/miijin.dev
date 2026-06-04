@@ -253,6 +253,17 @@ p a:hover, .post-content a:hover, .list-posts a:hover {
   border-bottom: 2px solid #e5e7eb !important;
 }
 
+/* Mês dentro de cada seção */
+.list-posts .posts-month {
+  font-family: var(--font-heading);
+  font-size: 1.2rem;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: var(--sketch-muted);
+  border-bottom: 1px solid var(--sketch-muted);
+  padding-bottom: 0.3rem;
+}
+
 /* ---------------------------------------------
    8. POST INDIVIDUAL
    --------------------------------------------- */

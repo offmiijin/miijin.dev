@@ -3,14 +3,20 @@
     <h1 class="list-title">#{{ .Title }}</h1>
 
     {{ if .Pages }}
+        {{ range .Pages.GroupBy "Section" }}
+        {{ $sectionName := .Key }}
+        {{ $sectionPages := .Pages }}
+
+        <h2 class="posts-year">{{ $sectionName | title }}</h2>
+
         {{ $first := true }}
-        {{ range .Pages.GroupByDate "2006" }}
+        {{ range $sectionPages.GroupByDate "2006" }}
         {{ range .Pages.GroupByDate "January" }}
         {{ if not $first }}
         <hr class="sketch-divider">
         {{ end }}
         {{ $first = false }}
-        <h2 class="posts-year">{{ (time.Format "2006" (index .Pages 0).Date) }} — {{ (time.Format "January" (index .Pages 0).Date) | title }}</h2>
+        <h3 class="posts-month">{{ (time.Format "2006" (index .Pages 0).Date) }} — {{ (time.Format "January" (index .Pages 0).Date) | title }}</h3>
         <ul class="post-list">
             {{ range .Pages }}
             <li class="post-item">
@@ -20,6 +26,8 @@
             {{ end }}
         </ul>
         {{ end }}
+        {{ end }}
+
         {{ end }}
     {{ else }}
         <p>{{ i18n "nothing" }}</p>
