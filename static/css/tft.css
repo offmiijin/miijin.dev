@@ -204,6 +204,10 @@ html[data-theme="dark"] .nav-link a:hover {
   align-items: center;
 }
 
+.nav-hamburger-list .dark-theme-toggle {
+  justify-content: center;
+}
+
 .dark-theme-toggle .feather {
   color: #374151;
   vertical-align: middle;
@@ -231,6 +235,7 @@ html[data-theme="dark"] .dark-theme-toggle .feather {
    6. CONTAINER PRINCIPAL (lista)
    --------------------------------------------- */
 .list-posts {
+  box-sizing: border-box;
   max-width: 800px;
   margin: 2rem auto 4rem auto;
   padding: 2rem;
@@ -523,7 +528,7 @@ pre code {
    --------------------------------------------- */
 @media (max-width: 768px) {
   .list-posts {
-    margin: 1rem;
+    margin: 1rem auto;
     padding: 1.2rem;
     border-radius: 15px 8px 15px 8px / 8px 15px 8px 15px;
     box-shadow: 4px 4px 0px rgba(17, 24, 39, 0.05);
