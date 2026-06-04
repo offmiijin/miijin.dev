@@ -1,5 +1,5 @@
 ---
-title: "Articles"
+title: "Artigos"
 ---
 
 Artigos da TFT.

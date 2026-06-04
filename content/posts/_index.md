@@ -1,10 +1,10 @@
 ---
-title: "Posts Pessoais"
+title: "Posts"
 description: "Meus artigos recentes sobre tecnologia, viagens e aprendizado"
 date: 2026-05-31
 ---
 
-# Meus Posts
+# Posts
 
 Esta seção contém meus artigos pessoais sobre tecnologia, desenvolvimento, viagens e aprendizado.
 

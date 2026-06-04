@@ -32,7 +32,7 @@ theme = 'gokarna'
     weight = 20
   [[menu.main]]
     identifier = "chronicles"
-    name = "Chronicles"
+    name = "Crônicas"
     url = "/chronicles/"
     weight = 25
   [[menu.main]]
