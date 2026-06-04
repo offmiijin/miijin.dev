@@ -225,6 +225,7 @@ html[data-theme="dark"] .dark-theme-toggle .feather {
 /* Hamburger menu */
 .nav-hamburger-list {
   background: var(--sketch-card);
+  top: 100%;
 }
 
 .nav-item a {
@@ -527,17 +528,6 @@ pre code {
    14. RESPONSIVIDADE
    --------------------------------------------- */
 @media (max-width: 768px) {
-  .list-posts {
-    margin: 1rem auto;
-    padding: 1.2rem;
-    border-radius: 15px 8px 15px 8px / 8px 15px 8px 15px;
-    box-shadow: 4px 4px 0px rgba(17, 24, 39, 0.05);
-  }
-
-  .list-title {
-    font-size: 1.6rem;
-  }
-
   h1 { font-size: 1.8rem; }
   h2 { font-size: 1.5rem; }
   h3 { font-size: 1.2rem; }
