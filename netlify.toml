@@ -7,5 +7,3 @@
 
 [[plugins]]
   package = "netlify-plugin-hugo-cache-resources"
-  [plugins.inputs]
-    bustCache = "on-demand"
