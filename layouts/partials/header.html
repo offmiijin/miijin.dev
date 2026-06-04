@@ -57,8 +57,7 @@
             <ul class="nav-hamburger-list visibility-hidden">
                 {{- if eq .Section "tft" -}}
                 <li class="nav-item"><a href="/tft/posts/">Posts</a></li>
-                <li class="nav-item"><a href="/chronicles/">Crônicas</a></li>
-                <li class="nav-item"><a href="/tft/articles/">Artigos</a></li>
+                <li class="nav-item"><a href="/tft/articles/" aria-label="tft-articles">Artigos</a></li>
                 <li class="nav-item"><a href="/">MII</a></li>
                 <li class="nav-item"><a href="/tags/">Tags</a></li>
                 {{- else -}}
@@ -69,7 +68,6 @@
                 </li>
                 {{- end -}}
                 {{- end -}}
-                <li class="nav-item"><a href="/tft/articles/">Artigos</a></li>
                 {{- end -}}
                 <li class="nav-item dark-theme-toggle">
                     <span class="sr-only dark-theme-toggle-screen-reader-target">theme</span>
