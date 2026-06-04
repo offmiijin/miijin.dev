@@ -250,7 +250,11 @@ p a:hover, .post-content a:hover, .list-posts a:hover {
   font-size: 1.5rem;
   margin-top: 2rem;
   padding-bottom: 0.3rem;
-  border-bottom: 2px solid #e5e7eb !important;
+  border-bottom: 2px solid #0f172a;
+}
+
+html[data-theme="dark"] .list-posts .posts-year {
+  border-bottom-color: #f3f4f6;
 }
 
 /* Mês dentro de cada seção */
