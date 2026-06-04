@@ -497,8 +497,8 @@ code {
   background: var(--sketch-bg-lines);
   border: 1px solid rgba(17, 24, 39, 0.06);
   border-radius: 6px 4px 8px 3px;
-  padding: 0.15em 0.4em;
-  font-size: 0.9em;
+  padding: 0.1em 0.35em;
+  font-size: 0.8em;
   color: #374151;
 }
 
