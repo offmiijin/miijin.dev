@@ -31,6 +31,11 @@ theme = 'gokarna'
     url = "/posts/"
     weight = 20
   [[menu.main]]
+    identifier = "chronicles"
+    name = "Chronicles"
+    url = "/chronicles/"
+    weight = 25
+  [[menu.main]]
     identifier = "tft"
     name = "TFT"
     url = "/tft/"
