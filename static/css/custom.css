@@ -14,3 +14,66 @@
 .avatar img:hover {
     transform: scale(1.05);
 }
+
+/* =============================================
+   Mobile Responsive (≤ 820px)
+   ============================================= */
+@media only screen and (max-width: 820px) {
+
+    /* Reduz padding dos cards na lista e post individual */
+    .list-posts,
+    .post.container {
+        padding: 1.25rem;
+    }
+
+    /* Reduz margem do post individual */
+    .post.container {
+        margin: 1.25rem auto;
+    }
+
+    /* Reduz tamanho do título do post */
+    .post-header-section h1 {
+        font-size: 1.5rem;
+    }
+
+    /* Reduz título da lista */
+    .list-posts .list-title {
+        font-size: 1.5rem;
+    }
+
+    /* Imagens responsivas */
+    .post-content img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    /* Touch targets maiores para navegação entre posts */
+    .prev-link, .next-link {
+        padding: 0.75rem 1rem;
+        min-height: 44px;
+        display: flex;
+        align-items: center;
+    }
+
+    /* Empilha navegação prev/next verticalmente */
+    .sketch-nav {
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+
+    .prev-link, .next-link {
+        width: 100%;
+        text-align: center;
+        justify-content: center;
+    }
+
+    /* Item de lista com touch target adequado */
+    .post-item {
+        padding: 0.5rem 0;
+    }
+
+    .post-item a {
+        padding: 0.25rem 0;
+        display: inline-block;
+    }
+}
