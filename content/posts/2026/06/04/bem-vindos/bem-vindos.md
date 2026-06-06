@@ -10,7 +10,7 @@ title: "Bem Vindos"
 
 Independente de como tenha chego à esse blog, seja bem-vindo(a).
 
-Meu nome é Kennedy. Venha através deste, dizer que esse espaço é muito mais pessoal do que parece.
+Meu nome é Kennedy. Venho através deste, dizer que esse espaço é muito mais pessoal do que parece.
 
 Quero registrar e no mais, compartilhar um pouco de experiência, pensamentos, opiniões com quem estiver disposto a ler e ter a mente aberta para discussões.
 
