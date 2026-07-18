@@ -8,7 +8,7 @@ tags: ["privacidade", "redes sociais", "reflexão", "relacionamentos", "autentic
 title: "Sou Reservado, Não Low Profile"
 ---
 
-Sou Japonês e uso a Internet desde a infância, mas poucas vezes postei algo sobre mim. Não por reclusão — nunca achei isso interessante ou relevante, nem para mim nem para ninguém. E continuo na mesma premissa.
+Sou Japonês e uso a Internet desde a infância, mas poucas vezes postei algo sobre mim, não por reclusão — nunca achei isso interessante ou relevante, nem para mim nem para ninguém. E continuo na mesma premissa.
 
 Já ouvi pitaco de diversas pessoas sobre meu perfil ser morto e vazio e que quando eu posto alguma coisa nunca é algo interessante — eu posto (às vezes) sobre o que estou trabalhando ou estudando. Por que as pessoas têm tanta necessidade em "saber" o que raios eu estou fazendo ou deixando de fazer? Não somente eu, mas qualquer pessoa do seu círculo social.
 
@@ -31,8 +31,8 @@ Os relacionamentos hoje em dia precisam ser mostrados para diversas pessoas — 
 ## A Vida Fora das Telas
 As pessoas precisam dar um passo atrás em relação à exposição na Internet, precisam deixar de ser viciadas digitalmente com likes, comentários, reposts etc. para viver o mundo real. A fantasia que é vendida dentro das redes é tentadora, mas ainda assim é uma falsa ilusão.
 
-Seja mais presente na vida real com quem realmente importa. Deixe a atenção de desconhecidos no seu perfil das redes sociais para estar com a família, amigos, companheiros. Registre sim os momentos com quem ama, mas leve o sentido da palavra com sua devida ação: registro é feito justamente para te relembrar de um breve momento vivido, não para vivê-lo em si.
+Seja mais presente na vida real com quem realmente importa. A atenção de desconhecidos no seu perfil das redes sociais não importam tanto do que estar com a família, amigos, companheiros. Registre sim os momentos com quem ama, mas leve o sentido da palavra com sua devida ação: registro é feito justamente para te relembrar de um breve momento vivido, não para vivê-lo em si.
 
 Não vou me considerar um ser especial por me preservar mais do que a maioria das pessoas, mas sinceramente, não vejo o menor sentido em saberem o que faço do começo ao fim do dia, se saí para algum lugar ou se viajei. Parece que as pessoas só enxergam sentido no que fazem depois de postar e receber as primeiras visualizações.
 
-Ser reservado não me torna antissocial ou desinteressante. Apenas me faz alguém que prioriza relações reais acima das virtuais.
+Ser reservado não me torna antissocial ou desinteressante, apenas me faz alguém que prioriza relações reais acima das virtuais.
