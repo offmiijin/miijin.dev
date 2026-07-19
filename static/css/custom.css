@@ -17,7 +17,21 @@
     text-transform: uppercase;
     letter-spacing: 0.05em;
     margin-bottom: 0.5rem;
-    color: var(--accent-color);
+    color: inherit;
+}
+
+/* TOC links: herdam cor do texto, hover/active usam mesmo azul dos demais links */
+#toc ul li a {
+    color: inherit;
+}
+
+#toc ul li a:visited {
+    color: inherit;
+}
+
+#toc ul li a:hover,
+#toc ul li a.active {
+    color: var(--sketch-accent);
 }
 
 /* Avatar hover effect (não conflita com TFT) */
