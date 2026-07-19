@@ -1,4 +1,4 @@
-{{ if .TableOfContents }}
+{{ if findRE "<li>" .TableOfContents 1 }}
 <aside class="post-toc">
     <nav id="toc">
         {{ if eq .Section "chronicles" }}
