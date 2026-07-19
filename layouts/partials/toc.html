@@ -27,18 +27,23 @@
     window.createScrollSpy = function() {};
 
     function updateActive() {
-        var activated = false;
+        var bestLink = null;
+        var bestDist = Infinity;
+
         links.forEach(function(link) {
             var id = link.getAttribute('href').substring(1);
             var el = document.getElementById(id);
             if (!el) return;
-            var rect = el.getBoundingClientRect();
-            if (!activated && rect.top <= 80 && rect.bottom >= 0) {
-                link.classList.add('active');
-                activated = true;
-            } else {
-                link.classList.remove('active');
+            var top = el.getBoundingClientRect().top;
+            var dist = Math.abs(top - 80);
+            if (dist < bestDist) {
+                bestDist = dist;
+                bestLink = link;
             }
+        });
+
+        links.forEach(function(link) {
+            link.classList.toggle('active', link === bestLink);
         });
     }
 
