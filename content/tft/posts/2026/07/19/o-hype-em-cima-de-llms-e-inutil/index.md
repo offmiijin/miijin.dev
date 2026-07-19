@@ -1,5 +1,5 @@
 ---
-date: 2026-07-19T16:00:00-03:00
+date: 2026-07-19
 title: "O Hype Em Cima de LLMs É Inútil"
 tags: ["llm", "inteligência artificial", "tecnologia", "hype", "ferramentas", "agentes"]
 slug: "o-hype-em-cima-de-llms-e-inutil"
