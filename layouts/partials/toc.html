@@ -1,17 +1,17 @@
 {{ if findRE "<li>" .TableOfContents 1 }}
 <aside class="post-toc">
-    <nav id="toc">
-        {{ if eq .Section "chronicles" }}
-            <p class="toc-label">Nesta Crônica</p>
-        {{ else if eq .Section "tft" }}
-            {{ if .Params.Article }}
-            <p class="toc-label">Neste Artigo</p>
-            {{ else }}
-            <p class="toc-label">Neste Post</p>
-            {{ end }}
+    {{ if eq .Section "chronicles" }}
+        <p class="toc-label">Nesta Crônica</p>
+    {{ else if eq .Section "tft" }}
+        {{ if .Params.Article }}
+        <p class="toc-label">Neste Artigo</p>
         {{ else }}
-            <p class="toc-label">Neste Post</p>
+        <p class="toc-label">Neste Post</p>
         {{ end }}
+    {{ else }}
+        <p class="toc-label">Neste Post</p>
+    {{ end }}
+    <nav id="toc">
         {{ .TableOfContents }}
     </nav>
 </aside>

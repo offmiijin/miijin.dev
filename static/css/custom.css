@@ -16,13 +16,20 @@
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.05em;
-    margin-bottom: 0.5rem;
     color: inherit;
+    margin: 0;
+    position: fixed;
+    top: 80px;
+    z-index: 1;
+    max-width: 240px;
+    padding-right: 0.75rem;
 }
 
-/* TOC: largura fixa e indentação em cascata */
+/* TOC: largura fixa, espaçamento da scrollbar e indentação em cascata */
 #toc {
     max-width: 240px;
+    padding-right: 0.75rem;
+    top: calc(80px + 2rem) !important;
 }
 
 #toc ul ul {
