@@ -1,7 +1,6 @@
 baseURL = '/'
 locale = 'pt-br'
 title = 'MII'
-theme = 'gokarna'
 
 [params]
   avatarURL = "/images/avatar.webp"
@@ -11,7 +10,7 @@ theme = 'gokarna'
   
   [params.meta]
     description = "Blog pessoal com posts sobre tecnologia, viagens e aprendizado. Migração do antigo blog A Table for Two."
-    keywords = "blog, tecnologia, viagens, aprendizado, hugo, gokarna"
+    keywords = "blog, tecnologia, viagens, aprendizado, hugo"
   
   [params.nav]
     about = "/#about"
@@ -52,3 +51,7 @@ theme = 'gokarna'
 [markup]
   [markup.highlight]
     noClasses = false
+  [markup.tableOfContents]
+    startLevel = 1
+    endLevel = 6
+    ordered = false

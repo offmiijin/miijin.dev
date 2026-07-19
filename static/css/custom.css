@@ -10,6 +10,56 @@
     transition: all 0.3s ease;
 }
 
+/* TOC label */
+.toc-label {
+    font-size: 0.875rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: inherit;
+    margin: 0;
+    position: fixed;
+    top: 80px;
+    z-index: 1;
+    max-width: 240px;
+    padding-right: 0.75rem;
+}
+
+/* TOC: largura fixa, espaçamento da scrollbar e indentação em cascata */
+#toc {
+    max-width: 240px;
+    padding-right: 0.75rem;
+    top: calc(80px + 2rem) !important;
+    bottom: 120px !important;
+}
+
+#toc ul ul {
+    padding-left: 0.75rem;
+}
+
+#toc ul ul ul {
+    padding-left: 1.5rem;
+}
+
+/* TOC links: herdam cor do texto, hover/active usam mesmo azul dos demais links */
+#toc ul li a {
+    color: inherit;
+    display: block;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    word-break: break-word;
+}
+
+#toc ul li a:visited {
+    color: inherit;
+}
+
+#toc ul li a:hover,
+#toc ul li a:active,
+#toc ul li a.active {
+    color: var(--sketch-accent) !important;
+}
+
 /* Avatar hover effect (não conflita com TFT) */
 .avatar img:hover {
     transform: scale(1.05);
@@ -19,6 +69,12 @@
    Mobile Responsive (≤ 820px)
    ============================================= */
 @media only screen and (max-width: 820px) {
+
+    /* Oculta ToC e label no mobile */
+    .toc-label,
+    #toc {
+        display: none;
+    }
 
     /* Reduz padding dos cards na lista e post individual */
     .list-posts,

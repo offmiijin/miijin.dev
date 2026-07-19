@@ -1,0 +1,68 @@
+{{ if findRE "<li>" .TableOfContents 1 }}
+<aside class="post-toc">
+    {{ if eq .Section "chronicles" }}
+        <p class="toc-label">Nesta Crônica</p>
+    {{ else if eq .Section "tft" }}
+        {{ if .Params.Article }}
+        <p class="toc-label">Neste Artigo</p>
+        {{ else }}
+        <p class="toc-label">Neste Post</p>
+        {{ end }}
+    {{ else }}
+        <p class="toc-label">Neste Post</p>
+    {{ end }}
+    <nav id="toc">
+        {{ .TableOfContents }}
+    </nav>
+</aside>
+
+<script>
+(function() {
+    var toc = document.getElementById('toc');
+    if (!toc) return;
+    var links = toc.querySelectorAll('a[href^="#"]');
+    if (!links.length) return;
+
+    // Desativa o createScrollSpy do tema (usamos o nosso)
+    window.createScrollSpy = function() {};
+
+    var clickCooldown = false;
+
+    function updateActive() {
+        if (clickCooldown) return;
+
+        var bestLink = null;
+        var bestDist = Infinity;
+
+        links.forEach(function(link) {
+            var id = link.getAttribute('href').substring(1);
+            var el = document.getElementById(id);
+            if (!el) return;
+            var top = el.getBoundingClientRect().top;
+            var dist = Math.abs(top - 80);
+            if (dist < bestDist) {
+                bestDist = dist;
+                bestLink = link;
+            }
+        });
+
+        links.forEach(function(link) {
+            link.classList.toggle('active', link === bestLink);
+        });
+    }
+
+    document.addEventListener('scroll', updateActive, { passive: true });
+
+    links.forEach(function(link) {
+        link.addEventListener('click', function() {
+            links.forEach(function(l) { l.classList.remove('active'); });
+            this.classList.add('active');
+            clickCooldown = true;
+            setTimeout(function() { clickCooldown = false; }, 500);
+        });
+    });
+
+    updateActive();
+})();
+</script>
+{{ end }}
