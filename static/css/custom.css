@@ -20,7 +20,11 @@
     color: inherit;
 }
 
-/* TOC: indentação em cascata */
+/* TOC: largura fixa e indentação em cascata */
+#toc {
+    max-width: 240px;
+}
+
 #toc ul ul {
     padding-left: 0.75rem;
 }
@@ -32,6 +36,10 @@
 /* TOC links: herdam cor do texto, hover/active usam mesmo azul dos demais links */
 #toc ul li a {
     color: inherit;
+    display: block;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    word-break: break-word;
 }
 
 #toc ul li a:visited {
