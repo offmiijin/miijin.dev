@@ -7,14 +7,14 @@
 </div>
 {{ end }}
 
-{{ $posts := where .Site.RegularPages "Section" "posts" }}
+{{ $pages := where .Site.RegularPages "Section" "in" (slice "posts" "chronicles") }}
 
-{{ if $posts }}
+{{ if $pages }}
 <div class="container list-posts">
     <h1 class="list-title">{{ .Site.Title }}</h1>
 
     {{ $first := true }}
-    {{ range $posts.GroupByDate "2006" }}
+    {{ range $pages.GroupByDate "2006" }}
     {{ range .Pages.GroupByDate "January" }}
     {{ if not $first }}
     <hr class="sketch-divider">
