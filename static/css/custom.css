@@ -30,6 +30,7 @@
     max-width: 240px;
     padding-right: 0.75rem;
     top: calc(80px + 2rem) !important;
+    bottom: 120px !important;
 }
 
 #toc ul ul {
