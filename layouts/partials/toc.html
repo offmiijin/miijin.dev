@@ -26,7 +26,11 @@
     // Desativa o createScrollSpy do tema (usamos o nosso)
     window.createScrollSpy = function() {};
 
+    var clickCooldown = false;
+
     function updateActive() {
+        if (clickCooldown) return;
+
         var bestLink = null;
         var bestDist = Infinity;
 
@@ -53,6 +57,8 @@
         link.addEventListener('click', function() {
             links.forEach(function(l) { l.classList.remove('active'); });
             this.classList.add('active');
+            clickCooldown = true;
+            setTimeout(function() { clickCooldown = false; }, 500);
         });
     });
 
