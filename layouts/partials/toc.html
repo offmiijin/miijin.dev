@@ -1,0 +1,18 @@
+{{ if .TableOfContents }}
+<aside class="post-toc">
+    <nav id="toc">
+        {{ if eq .Section "chronicles" }}
+            <p class="toc-label">Nesta Crônica</p>
+        {{ else if eq .Section "tft" }}
+            {{ if .Params.Article }}
+            <p class="toc-label">Neste Artigo</p>
+            {{ else }}
+            <p class="toc-label">Neste Post</p>
+            {{ end }}
+        {{ else }}
+            <p class="toc-label">Neste Post</p>
+        {{ end }}
+        {{ .TableOfContents }}
+    </nav>
+</aside>
+{{ end }}
