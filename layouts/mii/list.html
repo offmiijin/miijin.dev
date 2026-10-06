@@ -16,7 +16,7 @@
         {{ range .Pages.ByDate.Reverse }}
         <li class="post-item">
             <span class="post-date">{{ .Date.Format "02/01" }}</span>
-            <a href="{{ .Permalink }}">{{ .Title | markdownify }}</a>
+            <a href="{{ .RelPermalink }}">{{ .Title | markdownify }}</a>
         </li>
         {{ end }}
     </ul>

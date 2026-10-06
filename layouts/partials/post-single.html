@@ -20,7 +20,7 @@
         {{ with .Params.tags }}
         <ul class="post-tags">
             {{ range . }}
-            <li class="tag"><a href="{{ "tags/" | absLangURL }}{{ . | urlize }}">{{ . }}</a></li>
+            <li class="tag"><a href="{{ "tags/" | relURL }}{{ . | urlize }}">{{ . }}</a></li>
             {{ end }}
         </ul>
         {{ end }}
@@ -35,10 +35,10 @@
     {{ if or .PrevInSection .NextInSection }}
     <div class="prev-next sketch-nav">
         {{ with .NextInSection }}
-        <a class="prev-link" href="{{ .Permalink }}">&larr; {{ .Title }}</a>
+        <a class="prev-link" href="{{ .RelPermalink }}">&larr; {{ .Title }}</a>
         {{ end }}
         {{ with .PrevInSection }}
-        <a class="next-link" href="{{ .Permalink }}">{{ .Title }} &rarr;</a>
+        <a class="next-link" href="{{ .RelPermalink }}">{{ .Title }} &rarr;</a>
         {{ end }}
     </div>
     {{ end }}
