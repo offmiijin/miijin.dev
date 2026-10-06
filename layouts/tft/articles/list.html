@@ -3,7 +3,8 @@
     <h1 class="list-title">Articles</h1>
 
     {{/* Obtém artigos com frontmatter article: true da seção tft */}}
-    {{ $articles := where .Site.RegularPages "Params.article" true }}
+    {{ $tftPages := where .Site.RegularPages "Section" "tft" }}
+    {{ $articles := where $tftPages "Params.article" true }}
 
     {{ if $articles }}
     {{ $first := true }}
@@ -18,7 +19,7 @@
         {{ range .Pages }}
         <li class="post-item">
             <span class="post-date">{{ .Date.Format "02/01" }}</span>
-            <a href="{{ .Permalink }}">{{ .Title | markdownify }}</a>
+            <a href="{{ .RelPermalink }}">{{ .Title | markdownify }}</a>
         </li>
         {{ end }}
     </ul>

@@ -1,13 +1,5 @@
 {{ define "main" }}
-{{ if .Content }}
-<div class="container list-posts">
-    <div class="post-content" style="text-align: left;">
-        {{ .Content }}
-    </div>
-</div>
-{{ end }}
-
-{{ $pages := where .Site.RegularPages "Section" "in" (slice "posts" "chronicles") }}
+{{ $pages := where .Site.RegularPages "Section" "mii" }}
 
 {{ if $pages }}
 <div class="container list-posts">
@@ -25,7 +17,7 @@
         {{ range .Pages.ByDate.Reverse }}
         <li class="post-item">
             <span class="post-date">{{ .Date.Format "02/01" }}</span>
-            <a href="{{ .Permalink }}">{{ .Title | markdownify }}</a>
+            <a href="{{ .RelPermalink }}">{{ .Title | markdownify }}</a>
         </li>
         {{ end }}
     </ul>

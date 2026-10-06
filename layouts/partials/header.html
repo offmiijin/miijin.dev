@@ -5,7 +5,7 @@
             {{- if eq .Section "tft" -}}
             <a class="nav-brand" href="/tft/">A Table For Two</a>
             {{- else -}}
-            <a class="nav-brand" href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a>
+            <a class="nav-brand" href="/">{{ .Site.Title }}</a>
             {{- end -}}
         </div>
 
@@ -30,7 +30,7 @@
             {{- range .Site.Menus.main -}}
             {{- if ne .Identifier "home" -}}
             <div class="nav-link">
-                <a href="{{ .URL | absURL }}" aria-label="{{ .Identifier }}">
+                <a href="{{ .URL | relURL }}" aria-label="{{ .Identifier }}">
                     {{- .Name -}}
                 </a>
             </div>
@@ -64,7 +64,7 @@
                 {{- range .Site.Menus.main -}}
                 {{- if ne .Identifier "home" -}}
                 <li class="nav-item">
-                    <a href="{{ .URL | absURL }}">{{- .Name -}}</a>
+                    <a href="{{ .URL | relURL }}">{{- .Name -}}</a>
                 </li>
                 {{- end -}}
                 {{- end -}}
